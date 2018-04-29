@@ -294,14 +294,6 @@ a {
 	margin-top: 5px;
 }
 
-.popup input {
-	background-color: var(--color-dark-red);
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	color: white;
-	border: none;
-}
-
 /*****************************************************
 ## Welcome
 ******************************************************/
