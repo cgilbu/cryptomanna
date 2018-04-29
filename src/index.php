@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/config.php"); ?>
+
 <html lang="en">
 <head>
 	<title>CryptoManna</title>
@@ -34,14 +36,16 @@
 	<link rel="stylesheet" href="/resources/css/app.css">
 	<link rel="manifest" href="/manifest.json">
 
-	<!-- Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115099074-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-115099074-1');
-	</script>
+	<?php if(!empty($_config_google_analytics_id)) : ?>
+		<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= $config_google_analytics_id ?>"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', '<?= $config_google_analytics_id ?>');
+		</script>
+	<?php endif; ?>
 </head>
 <body>
 	<div id="getCryptoManna">Get a manna</div>
