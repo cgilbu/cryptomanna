@@ -21,7 +21,7 @@ API.callDBT = function(url, parameters, callback) {
 	}).done(function(data) {
 		callback(data);
 	}).fail(function() {
-		alert("Something went wrong. Error code: API 1");
+		console.log("Something went wrong. Error code: API 1");
 	});
 }
 
