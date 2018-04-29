@@ -21,12 +21,13 @@ var filesToCache = [
 	'/resources/images/touch-icon-500px.png',
 	'/resources/images/touch-icon-800px.png',
 
-	'/resources/css/app.css',
-
 	'https://fonts.googleapis.com/css?family=Open+Sans',
-
 	'/vendors/fontawesome/css/fontawesome-all.min.css',
 	'/vendors/select2/css/select2.min.css',
+	'/resources/css/app.css',
+
+	'/manifest.json',
+	'/appVersion.json',
 
 	'/vendors/jquery-3.3.1.min.js',
 	'/vendors/select2/js/select2.min.js',
