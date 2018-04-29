@@ -1,0 +1,35 @@
+{
+	"name": "CryptoManna",
+	"short_name": "Manna",
+	"start_url": ".",
+	"icons": [
+		{
+			"src": "/resources/images/touch-icon-48px.png",
+			"type": "image/png",
+			"sizes": "48x48"
+		},
+		{
+			"src": "/resources/images/touch-icon-96px.png",
+			"type": "image/png",
+			"sizes": "96x96"
+		},
+		{
+			"src": "/resources/images/touch-icon-192px.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/resources/images/touch-icon-500px.png",
+			"type": "image/png",
+			"sizes": "500x500"
+		},
+		{
+			"src": "/resources/images/touch-icon-800px.png",
+			"type": "image/png",
+			"sizes": "800x800"
+		}
+	],
+	"background_color": "#08253b",
+	"theme_color": "#08253b",
+	"display": "standalone"
+}

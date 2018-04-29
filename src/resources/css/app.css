@@ -1,0 +1,398 @@
+
+/*****************************************************
+## Variables
+******************************************************/
+
+:root {
+	--app-width: 700px;
+	--color-dark-blue: #08253b;
+	--color-bright-blue: #0b3049;
+	--color-dark-red: #bc4b50;
+	--color-bright-red: #f04e51;
+	--color-yellow: #e5d948;
+}
+
+/*****************************************************
+## General
+******************************************************/
+
+body {
+	width: var(--app-width);
+	margin: 0 auto;
+	padding-top: 20px;
+	padding-bottom: 30px; /* Due to static footer */
+	font-size: 14px;
+	text-align: center;
+	color: white;
+	background-color: var(--color-dark-blue);
+	font-family: 'Open Sans', sans-serif;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+* {
+	box-sizing: border-box;
+	line-height: normal;
+}
+
+a {
+	color: white;
+}
+
+.clear {
+	display: block !important;
+	clear: both;
+}
+
+/*****************************************************
+## Sections
+******************************************************/
+
+.section {
+	display: none;
+	position: absolute;
+	top: 0;
+	min-height: 100%;
+	width: var(--app-width);
+	padding: 0 20px;
+	padding-bottom: 10px;
+	background-color: var(--color-dark-blue);
+	text-align: left;
+}
+
+/*****************************************************
+## Buttons
+******************************************************/
+
+#getCryptoManna {
+	padding: 10px 0;
+	background-color: var(--color-bright-red);
+	font-size: 16px;
+	text-transform: uppercase;
+	border-radius: 2px;
+	cursor: pointer;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+#getCryptoManna.disabled {
+	background-color: var(--color-yellow);
+}
+
+.linkButton {
+	display: none;
+	margin: 5px 0;
+	padding: 5px;
+	background-color: var(--color-bright-red);
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	border-radius: 2px;
+	cursor: pointer;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.linkButton:hover {
+	background-color: var(--color-yellow);
+}
+
+.linkButton#reportButton {
+	display: block;
+}
+
+/*****************************************************
+## Manna
+******************************************************/
+
+.manna {
+	width: var(--app-width);
+	margin: 10px auto;
+	position: absolute;
+	transform: translate(0,-50%);
+	top: 48%;
+	left: 0;
+	right: 0;
+}
+
+.manna.long {
+	position: static;
+	transform: none;
+}
+
+.manna .clickInfo {
+	font-size: 16px;
+}
+
+.manna .mannaTitle {
+	display: none;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+
+.manna .mannaText {
+	display: none;
+	font-size: 18px;
+	line-height: 160%;
+}
+
+.manna .mannaText:first-letter {
+	text-transform: capitalize;
+}
+
+/*****************************************************
+## Loading
+******************************************************/
+
+.loading {
+	display: none;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.loading .progress {
+	display: inline-block;
+	width: 200px;
+	background-color: var(--color-bright-blue);
+}
+
+.loading .progress div {
+	display: none;
+	float: left;
+	height: 30px;
+	width: 50px;
+	background-color: var(--color-yellow);
+}
+
+.loading span {
+	font-size: 12px;
+}
+
+/*****************************************************
+## Footer
+******************************************************/
+
+.footer {
+	height: 30px;
+	width: 100%;
+	background-color: var(--color-bright-blue);
+	font-size: 12px;
+	text-transform: uppercase;
+
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	bottom: 0;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.footer .container {
+	height: 100%;
+	width: var(--app-width);
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer span {
+	padding: 0 20px;
+	cursor: pointer;
+}
+
+.footer .paging {
+	color: transparent;
+}
+
+.footer .paging.active {
+	color: white;
+}
+
+.footer .paging.disabled {
+	color: transparent !important;
+}
+
+/*****************************************************
+## Menu
+******************************************************/
+
+.menu {
+	top: 100%; /* For animation */
+	padding: 0;
+	padding-bottom: 30px; /* Due to static footer */
+	background-color: var(--color-dark-red);
+}
+
+.menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+.menu ul li {
+	cursor: pointer;
+	padding: 15px 20px;
+	border-bottom: 1px solid #bb585c; /* Custom border color */
+	display: flex;
+	align-items: center;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.menu ul li:first-of-type {
+	border-top: 1px solid #bb585c; /* Custom border color */
+}
+
+.menu ul li:hover {
+	background-color: var(--color-yellow);
+}
+
+.menu ul li .icon {
+	width: 18px;
+	margin-right: 15px;
+	font-size: 16px;
+}
+
+/*****************************************************
+## Popup
+******************************************************/
+
+.overlay {
+	display: none;
+	background-color: rgba(8,37,59,0.8); /* Dark blue */
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+}
+
+.popup {
+	display: none;
+	width: 400px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 10px 30px;
+	background-color: var(--color-dark-red);
+	border-radius: 2px;
+	z-index: 30;
+}
+
+.popup p {
+	margin-top: 5px;
+}
+
+.popup input {
+	background-color: var(--color-dark-red);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: white;
+	border: none;
+}
+
+/*****************************************************
+## Welcome
+******************************************************/
+
+.welcome p > b {
+	margin-left: 5px;
+}
+
+.welcome p > span {
+	display: block;
+	margin-top: 2px;
+	font-size: 12px;
+}
+
+/*****************************************************
+## Language
+******************************************************/
+
+.language .bookWarning {
+	display: none;
+	font-size: 12px;
+}
+
+.language .selectLanguage, .language .selectBible {
+	display: none;
+	font-size: 12px;
+}
+
+.language .selectLanguage {
+	margin-bottom: 5px;
+}
+
+.language .listLoader {
+	display: none;
+	margin-top: 7px;
+	text-align: center;
+}
+
+.language .listLoader img {
+	width: 20px;
+}
+
+.language .linkButton {
+	margin-top: 10px;
+}
+
+.select2-container--default .select2-selection--single, .select2-dropdown {
+	border-radius: 2px;
+	border: none;
+}
+
+.select2-results {
+	color: black;
+}
+
+/*****************************************************
+## Add to home screen
+******************************************************/
+
+.section.add p {
+	display: none;
+}
+
+/*****************************************************
+## Mobile
+******************************************************/
+
+@media only screen and (max-width: 700px) {
+	body, .section {
+		width: 100%;
+	}
+
+	#getCryptoManna, .manna, .footer .container, .popup {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	#getCryptoManna, .manna .clickInfo {
+		font-size: 14px;
+	}
+
+	.manna {
+		top: 50%;
+	}
+
+	.manna .mannaTitle {
+		font-size: 24px;
+	}
+
+	.manna .mannaText {
+		font-size: 16px;
+		line-height: normal;
+	}
+}
