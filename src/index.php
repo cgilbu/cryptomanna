@@ -12,10 +12,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="description" content="Lets you pick random mannas from a compilation of over two thousand awesome Bible passages.">
 
-	<meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>">
+	<meta property="og:url" content="https://<?= $_SERVER['HTTP_HOST'] ?>">
 	<meta property="og:title" content="CryptoManna">
 	<meta property="og:description" content="Lets you pick random mannas from a compilation of over two thousand awesome Bible passages.">
-	<meta property="og:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/resources/images/touch-icon-500px.png">
+	<meta property="og:image" content="https://<?= $_SERVER['HTTP_HOST'] ?>/resources/images/touch-icon-500px.png">
 
 	<link rel="shortcut icon" href="/resources/images/favicon.png">
 	<link rel="apple-touch-icon" href="/resources/images/touch-icon-500px.png">
