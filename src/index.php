@@ -36,15 +36,15 @@
 	<link rel="stylesheet" href="/resources/css/app.css">
 	<link rel="manifest" href="/manifest.json">
 
-	<?php if(!empty($_config_google_analytics_id)) : ?>
-		<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=<?= $config_google_analytics_id ?>"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', '<?= $config_google_analytics_id ?>');
-		</script>
+	<!-- Google Analytics -->
+	<?php if (!empty($_config_google_analytics_id)) : ?>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=<?= $_config_google_analytics_id ?>"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', '<?= $_config_google_analytics_id ?>');
+	</script>
 	<?php endif; ?>
 </head>
 <body>
