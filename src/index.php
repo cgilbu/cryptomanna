@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php include($_SERVER['DOCUMENT_ROOT'] . "/config.php"); ?>
+
 <html lang="en">
 <head>
 	<title>CryptoManna</title>
@@ -10,10 +12,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="description" content="Lets you pick random mannas from a compilation of over two thousand awesome Bible passages.">
 
-	<meta property="og:url" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>">
+	<meta property="og:url" content="https://<?= $_SERVER['HTTP_HOST'] ?>">
 	<meta property="og:title" content="CryptoManna">
 	<meta property="og:description" content="Lets you pick random mannas from a compilation of over two thousand awesome Bible passages.">
-	<meta property="og:image" content="https://<?php echo $_SERVER['HTTP_HOST']; ?>/resources/images/touch-icon-500px.png">
+	<meta property="og:image" content="https://<?= $_SERVER['HTTP_HOST'] ?>/resources/images/touch-icon-500px.png">
 
 	<link rel="shortcut icon" href="/resources/images/favicon.png">
 	<link rel="apple-touch-icon" href="/resources/images/touch-icon-500px.png">
@@ -35,13 +37,15 @@
 	<link rel="manifest" href="/manifest.json">
 
 	<!-- Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115099074-1"></script>
+	<?php if (!empty($_config_google_analytics_id)) : ?>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=<?= $_config_google_analytics_id ?>"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
-		gtag('config', 'UA-115099074-1');
+		gtag('config', '<?= $_config_google_analytics_id ?>');
 	</script>
+	<?php endif; ?>
 </head>
 <body>
 	<div id="getCryptoManna">Get a manna</div>
