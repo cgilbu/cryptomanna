@@ -32,15 +32,17 @@ View.DOM.welcomeButton.click(function() {
 });
 
 View.DOM.languageButton.click(function() {
-	View.DOM.languageSection.hide();
-	View.DOM.languageButton.hide();
+	if (!View.DOM.languageButton.hasClass("disabled")) {
+		View.DOM.languageSection.hide();
+		View.DOM.languageButton.hide();
 
-	if (Helpers.getOS() != "Unknown" && !window.navigator.standalone) {
-		View.DOM.addSection.show();
-		View.DOM.addButton.show();
-	} else {
-		View.DOM.goBackButtons.show();
-		View.DOM.footer.show();
+		if (Helpers.getOS() != "Unknown" && !window.navigator.standalone) {
+			View.DOM.addSection.show();
+			View.DOM.addButton.show();
+		} else {
+			View.DOM.goBackButtons.show();
+			View.DOM.footer.show();
+		}
 	}
 });
 
@@ -104,6 +106,7 @@ View.DOM.languageDropdown.change(function() {
 	var languageID = $(this).children(":selected").val();
 	View.DOM.selectBible.hide();
 	View.DOM.listLoader.show();
+	View.DOM.languageButton.addClass("disabled");
 	API.requestBibles(languageID, View.loadBibles);
 });
 

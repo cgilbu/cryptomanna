@@ -96,7 +96,7 @@ a {
 	user-select: none;
 }
 
-.linkButton:hover {
+.linkButton:hover, .linkButton.disabled {
 	background-color: var(--color-yellow);
 }
 

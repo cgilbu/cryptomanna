@@ -122,6 +122,7 @@ View.loadBibles = function(bibles) {
 
 	View.DOM.selectBible.show();
 	View.DOM.listLoader.hide();
+	View.DOM.languageButton.removeClass("disabled");
 }
 
 // ******************************************************
