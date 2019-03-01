@@ -121,6 +121,8 @@ a {
 .manna.long {
 	position: static;
 	transform: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .manna .clickInfo {

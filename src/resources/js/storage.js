@@ -58,5 +58,6 @@ Storage.clearHistory = function() {
 
 	View.updatePaging();
 	View.hideManna();
+	View.Helpers.adjustLongMannas();
 	View.DOM.clickInfo.show();
 }

@@ -17,6 +17,10 @@ Events.bindEvents = function() {
 
 View.DOM.mannaButton.click(function() {
 	if (!View.DOM.mannaButton.hasClass("disabled")) {
+		View.DOM.mannaTitle.html("");
+		View.DOM.mannaText.html("");
+		View.Helpers.adjustLongMannas();
+
 		View.DOM.clickInfo.hide();
 		View.fakeLoading();
 		Core.getMannas(Core.loadRandomManna);
