@@ -1,4 +1,4 @@
-var appVersion = '1';
+var appVersion = '1.1';
 var cacheObject = 'cryptomanna-' + appVersion;
 
 self.addEventListener('install', function(event) {
